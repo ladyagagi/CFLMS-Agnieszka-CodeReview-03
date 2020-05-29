@@ -158,10 +158,46 @@ input, select {
 
 }
 
-.heading {
-
+#condition-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
 }
 
+.condition-box {
+	border-top: 2px solid #808080;
+	box-shadow: 0px 3px 34px -10px rgba(0,0,0,0.75);
+	padding: 15px 25px 15px 10px;
+	color: #808080;
+	margin-top:  30px;
+	
+	flex-basis: 35%;
+	font-size: 15px;
+}
+
+.condition-box {}
+
+.condition-headling-blue {
+	color: #6495ED;
+	font-size: 20px;
+}
+
+.condition-headling-bold {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.condition-box li {
+	/*list-style-type: disc;
+	color: #90D2D4; Häckchen color*/
+	line-height: 30px;
+}
+
+.condition-box ul { 
+   padding-left: 1.2em;
+   margin-bottom: 20px;
+   margin-top: 10px;
+}
 
 /* +++++++++++++++++++++++++++++ footer +++++++++++++++++++++++++ */
 footer {
