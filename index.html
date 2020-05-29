@@ -27,16 +27,27 @@
 	<div class="customer-data-container">
 		<h1>Great coverage begins</h1>
 		<h1> with custom quote</h1>
-<form>
-		<input type="text" name="name" id="name" value="name">
-		<input type="number" name="age" id="age" value="age">
-		<select name="" multiple>
-			<option value="">select a country</option>
-			<option value="Austria">Austria</option>
-			<option value="Greece">Greece</option>
-			<option value="Hungary">Hungary</option>
-		</select>
-		<input type="text" name="horsepower" id="horsepower" value="horsepower">
+<form class="data-form">
+		
+		<label for="name">Your name:
+			<input type="text" name="namE" id="name" value="">
+		</label>
+		<label for="age">Age:
+			<input type="number" name="age" id="age" value="">
+		</label>
+		<label for="country">Country:
+			<select name="country" >
+				<option value="">select a country</option>
+				<option value="Austria">Austria</option>
+				<option value="Greece">Greece</option>
+				<option value="Hungary">Hungary</option>
+			</select>
+		</label>		
+			
+		<label for="horsepower">Horsepower of 
+			your car:
+		<input type="text" name="horsepower" id="horsepower" value="">
+		</label> 
 </form>
 <button type="submit" id="calculation-button" >Calculate</button>
 
