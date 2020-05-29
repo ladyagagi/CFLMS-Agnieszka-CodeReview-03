@@ -11,7 +11,7 @@ function calculateInsurance () {
 
 if (whichCountry == 'Austria') {	
 //insurance = horse_power x 100 / age   + 50 
-	var insurance = Math.round(Number(customerHorsepower * 100 / customerAge + 50);
+	var insurance = Math.round(Number(customerHorsepower * 100 / customerAge + 50));
 	document.getElementById('calculationResult').innerHTML = `Hi ${customerName}, your insurance for ${whichCountry} costs ${insurance} €.`
 	
 }
