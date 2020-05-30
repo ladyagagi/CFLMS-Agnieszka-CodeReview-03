@@ -67,14 +67,58 @@ nav a:hover {
 h1 {
 	font-size: 40px;
 	color:  white;
-	padding-top: 30px;
+ 	padding-top: 30px;
 	padding-left: 20px;
 }
 
-.customer-data-container {
+.team-row {
+	width: 80%;
+	min-width: 400px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	display: flex;
+	/* grid-template-rows: 1fr, 1fr;
+	grid-gap: 25px; */
+	height: auto;
+	justify-content: space-around;
+	align-items: center;
+/* 	border: 1px solid red;	 */
+}
+
+.teammember {
+	/* border: 1px solid green; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.teammember img {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+ 	object-position: 50% 0;
+	border-radius: 50%;
+	margin-bottom: 8px;
+}
+.teammember img:hover {
+	opacity: 0.7;
+}
+
+.teammember p {
+	text-align: center;
+}
+
+.teammember p:hover {
+	opacity: 0.7;
+	cursor: pointer;
+
+}
+
+.team-data-container {
    position: absolute;
    width: 80%;
-   height: 500px;
+   height: auto;
    margin: 0 auto;
    left: 10%;
    
@@ -89,58 +133,9 @@ h1 {
    align-items: center;
 }
 
-.customer-data-container h1 {
+.team-data-container h1 {
 	color: black;
 	text-align: center;
-}
-
-.data-form {
-	width: 80%;
-	min-width: 400px;
-	margin-top: 40px;
-	margin-bottom: 40px;
-	display: grid;
-	grid-template-columns: repeat(2, 2fr);
-	grid-gap: 28px;
-	height: auto;
-	justify-content: center;
-	align-items: center;
-	
-}
-
-input, select {
-	width: 100%;
-	height: 35px;
-	font-size: 18px;
-	color: #808080;
-	border-radius: 2px;
-	border: 1px solid #808080;
-	box-sizing: border-box;
-	display: inline-block;
-	padding: 5px 7px;
-}
-
-#calculation-button {
-	cursor: pointer;
-	display: inline-block;
-	border: 0;
-	border-radius: 10px;
-	padding: 5px 40px;
-	background: #339234;
-	color: #fff;
-	font-size: 24px;
-	margin-bottom: 50px;
-}
-
-#calculationResult {
-	font-size: 24px;
-	color: #339234;
-	background: rgba(255, 255, 255, .85);
-	padding: 10px;
-	border: 1px dotted #808080;
-	border-radius: 3px;
-	margin-top: -20px;
-	visibility: hidden;
 }
 
 .banner-grey {
@@ -239,7 +234,7 @@ footer p {
 		display: none;	
 	}
 	#header, .main-manu, .footer-logo {
-	justify-content: center;
+		justify-content: center;
 	}
 	.main-manu li {
 		padding-right: 10px;
@@ -247,65 +242,56 @@ footer p {
 	}
  	
 	h1 {
-	font-size: 30px;
-	/* color:  white; */
-	padding-top: 20px;
-	text-align: center;
+		font-size: 30px;
+		/* color:  white; */
+		padding-top: 20px;
+		text-align: center;
 	}
 
-   .customer-data-container {
-   position: absolute;
-   width: 100%;
-   height: 550px; 
+   .team-data-container {
+	   position: absolute;
+	   width: 100%;
+	   height: 550px; 
 
-   left: 0;
+	   left: 0;
 
-   /display: flex;
-   flex-direction: column;
-   align-items: center; 
-}
-.data-form {
-	
-	width: 100%;
-	margin-top: 20px;
-	margin-bottom: 40px;
-	display: flex;
-	display: grid;
-	grid-template-columns: repeat(1, 1fr); 
-	grid-gap: 5px;
-	height: auto;
-	justify-content: center;
-	align-items: center; 
-}
-input, select {
-	width: 100%;
-	left: 3%;
+	   display: flex;
+	   flex-direction: column;
+	   align-items: center; 
 	}
-
-	#calculation-button {
-	margin-top: -20px;
+	.team-row {
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 40px;
+		display: flex;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr); 
+		grid-gap: 5px;
+		height: auto;
+		justify-content: center;
+		align-items: center; 
 	}
 
 
 	.banner-grey {
-	padding-top: 100px;
-	height: auto;
+		padding-top: 100px;
+		height: auto;
 	}
 	#condition-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-.banner-grey p {
-	line-height: 25px;
-	font-size: 16px;
-	text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.banner-grey p {
+		line-height: 25px;
+		font-size: 16px;
+		text-align: center;
 
-}
-.condition-box{
-	width: 90%;
-}
+	}
+	.condition-box{
+		width: 90%;
+	}
 	.footer-logo {
 		margin-top: 20px;
 		padding-right: 0;
