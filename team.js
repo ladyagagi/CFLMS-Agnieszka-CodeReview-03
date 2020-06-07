@@ -1,62 +1,118 @@
 
 
-document.getElementsByClassName("teammember").addEventListener("click", teamMemberInfo);
 
-class Member { 
-   firstName = "";
-   lastName = "";  
-   email = "";
-   available = ""
-constructor(firstName, lastName, email, available) {
+class Person { 
+  identif = "";
+  firstName = "";
+  lastName = "";
+  email = "";
+  available = "";
+
+constructor(identif, firstName, lastName, email, available) {
+       this.identif = identif;
        this.firstName = firstName;
        this.lastName = lastName;
        this.email = email;
        this.available = available;
    }
    
-   teamMemberInfo() {
-       return 'My name is ' + this.firstName + ' ' +this.lastName + 'please contact me from ' + this.available + ' or write me a message ' +this.email; 
-   }
+ teamMemberInfo() {
+    
+       document.getElementById("memberContact").innerHTML = `Hi, my name is ${this.firstName} ${this.lastName}, please contact me from  ${this.available} or write me an email under ${this.email}`;    
+     
+};
+ };
+
+
+     let member1 = new Person("tc", "Tatiana", "Calderon", "t.calderon@insurance.at", "Mo-Fr");
+     let member2 = new Person("dr", "Daniel", "Ricciardo", "d.ricciardo@insurance.at", "Mo-Fr");
+     let member3 = new Person("sDs", "Simona", "de Silvestro", "s.silvestro@insurance.at", "Mo-Th");
+     let member4 = new Person("nh", "Nico", "Hulkenberg", "n.hulkenberg@insurance.at", "Wed-Fr");
    
-}
 
-	   var member1 = new Member("Tatiana", "Calderon", "t.calderon@insurance.at", "Mo-Fr");
-	   var member1 = new Member("Daniel", "Ricciardo", "d.ricciardo@insurance.at", "Mo-Fr");
-	   var member1 = new Member("Simona", "de Silvestro", "s.silvestro@insurance.at", "Mo-Th");
-	   var member1 = new Member("Nico", "Hulkenberg", "n.hulkenberg@insurance.at", "Wed-Fr");
-	 
-	
+   //  let allTeamMember = [member1, member2, member3, member4];
 
-// function teamMemberInfo () {
-	
-// 	var whichCountry = document.getElementById("country").value;
-// 	var customerName = document.getElementById("name").value;
-// 	var customerAge = Number(document.getElementById("age").value);
-// 	var customerHorsepower = Number(document.getElementById("horsepower").value);
+   // for(let member of allTeamMember) {
+   //    document.getElementById("memberContact").innerHTML += member;
+   // }
+ 
+  document.getElementById("tc").addEventListener("click", tatianaInfo);
+   
+   function tatianaInfo() {
+    member1.teamMemberInfo();
+    document.getElementById("tc").style.color = 'red';
+    
+  }
 
-// if (whichCountry == 'Austria') {	
-// //insurance = horse_power x 100 / age   + 50 
-// 	var insurance = Math.round(Number(customerHorsepower * 100 / customerAge + 50));
-// 	document.getElementById('calculationResult').style.visibility = "visible";
-// 	document.getElementById('calculationResult').innerHTML = `Hi ${customerName}, your insurance for ${whichCountry} costs ${insurance} €.`
-	
+
+   document.getElementById("dr").addEventListener("click", danielInfo);
+   function danielInfo() {
+    member2.teamMemberInfo();
+    document.getElementById("dr").style.color = 'red'; 
+  } 
+
+   document.getElementById("sDs").addEventListener("click", simonaInfo);
+   
+   function simonaInfo() {
+    member3.teamMemberInfo();
+    document.getElementById("sDs").style.color = 'red';
+  }
+   document.getElementById("nh").addEventListener("click", nicoInfo);
+   
+   function nicoInfo() {
+    member4.teamMemberInfo();
+    document.getElementById("nh").style.color = 'red';
+  }
+
+
+//       function giveTC() {
+//         console.log(teamMemberInfovar);
 // }
-// else if (whichCountry == 'Greece') {
-// // insurance = horse_power x 150 / (age+3)  + 50;
-// 	var insurance = Math.round(Number(customerHorsepower * 150 / (customerAge + 3) + 50));
-// 	document.getElementById('calculationResult').style.visibility = "visible";
-// 	document.getElementById('calculationResult').innerHTML = `Hi ${customerName}, your insurance for ${whichCountry} costs ${insurance} €.`
-// }
-// else if (whichCountry == 'Hungary') {
-// // insurance = horse_power x 120 / age  + 100;
-// 	var insurance = Math.round(Number(customerHorsepower * 120 / customerAge + 100));
-// 	document.getElementById('calculationResult').style.visibility = "visible";
-// 	document.getElementById('calculationResult').innerHTML = `Hi ${customerName}, your insurance for ${whichCountry} costs ${insurance} €.`
-// }
-// else {
-// 	document.getElementById('calculationResult').style.visibility = "visible";
-// 	document.getElementById('calculationResult').innerHTML = 'Please select a country'
-// };
+//   
+//     giveTC();
+     // document.getElementById("memberContact").innerHTML = `${member[0]}`;
+     //  if(member.identif == document.getElementById("tc"))
+        // console.log("hallo")member.teamMemberInfo();
+ 
+      // console.log(teamMemberInfo());
+    //   if (allTeamMember[i][0] == document.getElementById().value)
+    
+    
+   
+    
+    // for (i = 0; i < allTeamMember.length; i++) {
+    //   if (allTeamMember[0] == document.getElementById().value) {
+    //     document.getElementById('memberContact').innerHTML = ${allTeamMember[i][0]} ${allTeamMember[i][1]} 
+    //   }
+
+    // }
+
+
+// zweite Methode
+// document.getElementsByClassName("teammember").addEventListener("click", giveMeTeamMember);
+
+
+// var teamMembers = [["Tatiana", "Calderon", "t.calderon@insurance.at", "Mo-Fr"],
+//                    ["Daniel", "Ricciardo", "d.ricciardo@insurance.at", "Mo-Fr"],
+//                    ["Simona", "de Silvestro", "s.silvestro@insurance.at", "Mo-Th"],
+//                    ["Nico", "Hulkenberg", "n.hulkenberg@insurance.at", "Wed-Fr"]]
+
+// let i;
+// for ( i=0; i<teamMembers.length; i++ ) {
+//     if (teamMembers[1] == "Calderon") {
+//         for (let j=0; j<teamMembers[i].length; j++) {
+//       document.getElementById('memberContact').innerHTML = teamMembers[j][0] + ' '+ teamMembers[j][1] + teamMembers[j][2] + ' ' + 'available ' + teamMembers[j][3];
+//    }
+//   }
+    // else if () {
+
+    // }
+    // else if () {
+
+    // }
+    // else () {
+
+    // }
 // }
 
 

@@ -35,6 +35,9 @@ else {
 }
 
 
-
-
+// to clear the fields value
+	whichCountry.value = ' ';
+	customerName.value = ' ';
+	customerAge.value = ' ';
+	customerHorsepower.value = ' ';
 
